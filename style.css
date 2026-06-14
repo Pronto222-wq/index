@@ -29,6 +29,59 @@ body {
     margin: 0 0 25px 0;
 }
 
+/* menu-btn */
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #444444;
+}
+/* menu-btn */
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #444444;
+}
+
+@media (max-width: 786px) {
+    /* menu-btn  */
+    .menu-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        background-color: #f7f7f7;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.01);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        padding-top: 60px;
+    }
+
+
+    .nav-list ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .nav-list.active {
+        right: 0;
+    }
+}
+
 /* nav-list ul style  */
 .nav-list ul {
     list-style: none;
