@@ -16,6 +16,7 @@
                 <i class="fa fa-bars"></i>
             </button>
             <nav class="nav-list" id="navList">
+                <button id="closeBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
                 <ul>
                     <li><a href="#Home">Home</a></li>
                     <li><a href="#Men's Watches">Men's Watches</a></li>
@@ -310,13 +311,24 @@
             <a href="https://wa.me/97100000000" class="fa fa-whatsapp" target="_blank"></a>
             <p>All Rights Reserved&copy;Luxury Time 2026.</p>
         </footer>
+
+
+
+
+        <script>
+            const menuBtn = document.getElementById('menuBtn');
+            const closeBtn = document.getElementById('closeBtn');
+            const navList = document.getElementById('navList');
+            
+            menuBtn.addEventListener('click', () => {
+                navList.classList.add('active');
+            }) 
+            
+            closeBtn.addEventListener('click', () => {
+                navList.classList.remove('active')
+            })
+        </script>
     </body>
 
-    <script>
-        const menuBtn = document.getElementById('menuBtn');
-        const navList = document.getElementById('navList');
-        menuBtn.addEventListener('click', () => {
-            navList.classList.toggle('active');
-        }) 
-    </script>
+    
 </html>
